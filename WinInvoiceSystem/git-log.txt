@@ -1,0 +1,46 @@
+git init
+git remote add origin https://github.com/MarcherOV/WinInvoiceSystem.git
+git checkout -b develop
+git checkout -b feature/initial-project-setup
+echo "bin/" > .gitignore
+echo "obj/" >> .gitignore
+echo ".vs/" >> .gitignore
+git add .gitignore
+git commit -m "Add .gitignore file"
+git add WinInvoiceSystem/WinInvoiceSystem.csproj
+git commit -m "Add project configuration file csproj"
+git add WinInvoiceSystem/Program.cs
+git commit -m "Add main entry point Program.cs"
+git add WinInvoiceSystem/DatabaseHelper.cs
+git commit -m "Add DatabaseHelper class"
+git add WinInvoiceSystem/NbpService.cs
+git commit -m "Add NbpService class"
+git add WinInvoiceSystem/PdfService.cs
+git commit -m "Add PdfService class"
+git add WinInvoiceSystem/FileFontResolver.cs
+git commit -m "Add FileFontResolver utility"
+git add WinInvoiceSystem/Form1.cs
+git commit -m "Add LoginForm logic"
+git add WinInvoiceSystem/Form1.Designer.cs
+git commit -m "Add LoginForm designer code"
+git add WinInvoiceSystem/Form1.resx
+git commit -m "Add LoginForm resources"
+git add WinInvoiceSystem/RegisterForm.cs
+git commit -m "Add RegisterForm logic"
+git add WinInvoiceSystem/RegisterForm.Designer.cs
+git commit -m "Add RegisterForm designer code"
+git add WinInvoiceSystem/RegisterForm.resx
+git commit -m "Add RegisterForm resources"
+git add WinInvoiceSystem/MainForm.cs
+git commit -m "Add MainForm logic"
+git add WinInvoiceSystem/MainForm.Designer.cs
+git commit -m "Add MainForm designer code"
+git add WinInvoiceSystem/MainForm.resx
+git commit -m "Add MainForm resources"
+git push -u origin feature/initial-project-setup
+git checkout develop
+git pull origin develop
+git checkout -b feature/documentation
+git add git-log.txt
+git commit -m "Add git command history log"
+git push -u origin feature/documentation
